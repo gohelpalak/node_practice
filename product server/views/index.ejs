@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/">Home</a>
+    <h1>product page</h1>
+    <form action="/addproduct">
+        <table align="center" border="1">
+            <tr>
+                <td>Id</td>
+                <td>Product</td>
+                <td>Image</td>
+                <td>Name</td>
+                <td>Description</td>
+                <td>Price</td>
+                
+            </tr>
+
+            <tr>
+                <% product.map((pro)=>{ %>
+                    <tr>
+                        <td><%= pro.id%></td>
+                        <td><%= pro.product%></td>
+                        <!-- <td><%= pro.image%></td> -->
+                         <img src=<%= pro.image%> alt="">
+                        <td><%= pro.name%></td>
+                        <td><%= pro.description%></td>
+                        <td><%= pro.price%></td>
+                    </tr>
+                <%})%>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

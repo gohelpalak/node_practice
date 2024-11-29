@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background: url(https://images.pexels.com/photos/634524/pexels-photo-634524.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+	background-size: 1550px 800px;
+	background-repeat: no-repeat;
+    }
+    .about{
+	font-family: 'Cormorant Garamond', serif;
+	border: 15px dashed #755737;
+	width: 80%;
+	max-width: 650px;
+	margin: 40px auto;
+	background: url(https://images.pexels.com/photos/634524/pexels-photo-634524.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+	background-size: 1550px 800px;
+	background-repeat: no-repeat;
+}
+
+h1 {
+	font-family: 'Satisfy', cursive;
+	text-align: center;
+	font-size: 3.0em;
+	text-decoration: underline;
+	margin: auto;
+}
+
+h4{
+	font-family: 'Satisfy', cursive;
+	font-size: 1.5em;
+	margin-left: 2%;
+	margin-top: auto;
+}
+
+div p{
+	margin-left: 2%;
+	margin-right: 2%;
+	font-weight: 800; 
+}
+
+ul{
+	margin: auto;
+}
+.bgimg{
+	background: #FFB0ED;
+}
+
+hr {
+    overflow: visible; /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+hr:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: white;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+</style>
+<body>
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+              <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
+              <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+          </a>
+          <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+              </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <li>
+                <a href="/" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Index</a>
+              </li>
+              <li>
+                <a href="/about" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+              </li>
+              <li>
+                <a href="/product" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Product</a>
+              </li>product
+              <li>
+                <a href="/contact" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+              </li>
+              <!-- <li>
+                <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Error</a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- =====================================header====================== -->
+     <div class="about">
+        <div class="bgimg">
+        <h1>Welcome!</h1>
+        
+        <p>Hey guys! My name is Kryss and welcome to my about me page. It's a little sparse at the moment but it'll fill up with fun stuff in no time! For now, I'll tell you a little about myself. I have a Bachelors in English, I've been teaching myself web development since January 2018, and I eventually want to have a career as a front-end web developer. I love designing and making things look nice, so I'm finally learning how to draw, too! Plus, it's never too late to learn anything, so I'm glad I'm at least starting.</p>
+        
+        <p>Well, this is the start of my journey and I hope you'll stick around as I keep going with this. If you want to contact me, here's a link to my <a href="https://twitter.com/KeeneKryss" target="_blank">Twitter</a> account. Sometimes I have some insightful things to say, but most of the time it's bad puns and full of nerd things.</p>
+        
+        <hr>
+        
+        <h4>My Hobbies</h4>
+            <ul>
+                <li>Playing Video Games</li>
+                <li>Coding</li>
+                <li>Baking</li>
+                <li>Reading</li>
+                <li>Making Bad Puns</li>
+                <li>Learning New Programing Techniques</li>
+                <li>Drawing [Learning to, anyways]</li>
+                <li>Adding to my Neverending List of Webcomics</li>
+            </ul>
+        </div>
+    </div>
+        
+        
+      
+</body>
+</html>

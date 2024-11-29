@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col items-center">
+    <header class="bg-blue-600 w-full py-4">
+        <h1 class="text-white text-center text-3xl font-bold">Task Manager</h1>
+    </header>
+    <main class="w-full max-w-3xl mt-8">
+        <section class="bg-white shadow-md rounded-lg p-6">
+            <h2 class="text-xl font-semibold mb-4">Add a New Task</h2>
+            <form action="/addtask" method="POST" class="flex space-x-4">
+                <input 
+                    type="text" 
+                    name="task" 
+                    placeholder="Enter a new task..." 
+                    required 
+                    class="flex-grow px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                />
+                <button 
+                    type="submit" 
+                    class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+                    Add Task
+                </button>
+            </form>
+        </section>
+
+        <section class="mt-8">
+            <h2 class="text-xl font-semibold mb-4">Pending Tasks</h2>
+            <ul class="bg-white shadow-md rounded-lg p-6 space-y-4">
+                <% alltask.forEach((task, index) => { %>
+                <li class="flex justify-between items-center p-4 border-b">
+                    <span class="text-gray-800"><%= task.task %></span>
+                    <div class="space-x-4">
+                        <a 
+                            href="/complete/<%= index %>" 
+                            class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">
+                            Complete
+                        </a>
+                        <a 
+                            href="/delete/<%= index %>" 
+                            class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600">
+                            Delete
+                        </a>
+                    </div>
+                </li>
+                <% }); %>
+            </ul>
+        </section>
+
+        <section class="mt-8">
+            <h2 class="text-xl font-semibold mb-4">Completed Tasks</h2>
+            <ul class="bg-white shadow-md rounded-lg p-6 space-y-4">
+                <% completedtask.forEach((task) => { %>
+                <li class="p-4 bg-gray-100 rounded-lg">
+                    <span class="text-gray-600 line-through"><%= task.task %></span>
+                </li>
+                <% }); %>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
