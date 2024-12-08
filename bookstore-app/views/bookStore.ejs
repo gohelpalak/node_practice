@@ -24,56 +24,55 @@
     <div class="w-full max-w-3xl bg-white rounded-lg shadow-lg p-8">
       <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Add a New Book</h2>
       <form id="book-form" method="post" action="/books/addBook" class="space-y-6">
-        <!-- Book Name -->
+        
         <div>
           <label for="book-name" class="block text-lg font-medium text-gray-700">Book Name</label>
           <input type="text" id="book-name" name="bookName" placeholder="Enter book name"
             class="mt-2 w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-teal-500">
         </div>
 
-        <!-- Book Title -->
         <div>
           <label for="book-title" class="block text-lg font-medium text-gray-700">Book Title</label>
           <input type="text" id="book-title" name="bookTitle" placeholder="Enter book title"
             class="mt-2 w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-teal-500">
         </div>
 
-        <!-- Author Name -->
+        
         <div>
           <label for="author-name" class="block text-lg font-medium text-gray-700">Author Name</label>
           <input type="text" id="author-name" name="authorName" placeholder="Enter author name"
             class="mt-2 w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-teal-500">
         </div>
 
-        <!-- Publish Date -->
+        
         <div>
           <label for="publish-date" class="block text-lg font-medium text-gray-700">Publish Date</label>
           <input type="date" id="publish-date" name="publishDate"
             class="mt-2 w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-teal-500">
         </div>
 
-        <!-- Book Price -->
+      
         <div>
           <label for="book-price" class="block text-lg font-medium text-gray-700">Price (in INR)</label>
           <input type="number" id="book-price" name="bookPrice" placeholder="Enter price"
             class="mt-2 w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-teal-500">
         </div>
 
-        <!-- Book Pages -->
+        
         <div>
           <label for="book-pages" class="block text-lg font-medium text-gray-700">Pages</label>
           <input type="number" id="book-pages" name="bookPages" placeholder="Enter pages"
             class="mt-2 w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-teal-500">
         </div>
 
-        <!-- Book Image -->
+        
         <div>
           <label for="book-image" class="block text-lg font-medium text-gray-700">Book Image URL</label>
           <input type="url" id="book-image" name="bookImage" placeholder="Enter image URL"
             class="mt-2 w-full border border-gray-300 rounded-md p-3 focus:outline-none focus:ring-2 focus:ring-teal-500">
         </div>
 
-        <!-- Add Button -->
+        
         <button type="submit"
           class="w-full bg-teal-600 text-white py-3 rounded-md text-lg font-semibold hover:bg-teal-700 transition duration-300">
           Add Book
@@ -86,7 +85,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 py-8">
       <% getBooks.map((book) => { %>
       <div class="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden">
-        <!-- Book Image -->
+        
         <div class="relative">
           <img src="<%= book.bookImage %>" alt="Book Cover" class="w-full h-[350px] object-cover">
           <span class="absolute top-2 left-2 bg-teal-600 text-white text-sm px-2 py-1 rounded">
@@ -94,7 +93,6 @@
           </span>
         </div>
   
-        <!-- Book Details -->
         <div class="p-6">
           <h2 class="text-xl font-bold text-gray-800 truncate"><%= book.bookName %></h2>
           <p class="text-gray-500 text-md mt-1">by <span class="font-semibold"><%= book.authorName %></span></p>
@@ -102,7 +100,6 @@
           <p class="text-gray-500 text-md mt-1">Published: <span class="font-medium"><%= book.publishDate %></span></p>
           <p class="text-gray-500 text-md mt-1">Pages: <span class="font-medium"><%= book.bookPages %></span></p>
           
-          <!-- Action Buttons -->
           <div class="flex justify-between items-center mt-4">
             <a href="/books/deleteBook/<%= book.id %>"
               class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-lg font-bold transition duration-200">
