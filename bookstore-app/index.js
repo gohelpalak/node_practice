@@ -11,7 +11,6 @@ app.use("/books",require("./routes/bookRoutes"));
 app.get("/",(req,res)=>{
     return res.render("index")
 })
-console.log("=========> res" , res)
 app.listen(port, (err) => {
     if (err) {
         console.log(err);
