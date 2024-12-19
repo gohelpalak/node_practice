@@ -1,19 +1,25 @@
 const express = require('express');
-const app = express();
-const port = 2344;
 const path = require('path');
-const dbConnect = require('./config/dbconnection')
+const db = require('./config/db');
+const userRoutes = require('./routes/userRoutes');
+const multer = require('multer');
 
+const app = express();
+const port = 2030;
 
+// Middleware
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }));
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
+// Routes
+app.use('/', userRoutes);
 
-app.use('/movie',require('./routes/movieRoutes'));
-app.use('/', (req, res) => {
-    return res.render('index');
-})
-app.listen(port, () => {
-    console.log(`Server start at http://localhost:${port}`);
-})
+// Start server
+app.listen(port, (err) => {
+    if (err) {
+        console.error(err);
+        return;
+    }
+    console.log(`Server is running at http://localhost:${port}`);
+});
